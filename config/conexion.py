@@ -5,7 +5,7 @@ from models.uni_model import Base
 logging.basicConfig(level=logging.INFO)
 
 # Ruta de la base de datos SQLite (archivo local en tu proyecto Codespaces)
-SQLITE_URI = "sqlite:///Universiada.db"
+SQLITE_URI = "sqlite:///Universidad.db"
 
 # Crear motor de conexión a SQLite
 engine = create_engine(SQLITE_URI, echo=True)

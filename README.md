@@ -9,3 +9,10 @@ El sistema permite registrar, consultar, actualizar y eliminar universidades, as
 La arquitectura por capas facilita la separación de responsabilidades, lo que mejora la mantenibilidad, escalabilidad y flexibilidad del código.
 
 El uso de un ORM como SQLAlchemy permite desacoplar la lógica de negocio de la base de datos, lo que facilita la portabilidad y la seguridad.
+
+
+
+python -m pip install flask
+python -m pip install flask-sqlalchemy
+pip install python-dotenv
+
