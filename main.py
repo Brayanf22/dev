@@ -14,9 +14,7 @@ from controllers.user_controller import user_bp
 from controllers.uni_controller import uni_bp  
 from models.db import db
 
-# =========================
-# Carga de entorno y logging
-# =========================
+
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -25,9 +23,6 @@ logger = logging.getLogger(__name__)
 logger.info("Inicializando la aplicación Flask")
 app = Flask(__name__)
 
-# =========================
-# Configuración Swagger
-# =========================
 app.config["SWAGGER"] = {
     "title": "FlaskAPIExample",
     "uiversion": 3,
@@ -55,9 +50,8 @@ swagger_template = {
 }
 swagger = Swagger(app, template=swagger_template)
 
-# =========================
-# Configuración DB y JWT
-# =========================
+
+
 db_url = os.getenv("MYSQL_URL")
 if db_url and db_url.startswith("mysql://"):
     db_url = db_url.replace("mysql://", "mysql+pymysql://", 1)
@@ -77,18 +71,13 @@ logger.info(f"Conexión a la base de datos: {app.config['SQLALCHEMY_DATABASE_URI
 db.init_app(app)
 logger.info("SQLAlchemy inicializado")
 
-# =========================
-# Blueprints
-# =========================
+
 app.register_blueprint(user_bp)
 logger.info("Blueprint de usuarios registrado")
 
 app.register_blueprint(uni_bp)   
 logger.info("Blueprint de universidades registrado")
 
-# =========================
-# Rutas utilitarias
-# =========================
 @app.route("/health")
 def health():
     return {"status": "ok"}, 200
@@ -115,9 +104,6 @@ def index():
         200,
     )
 
-# =========================
-# Creación de tablas
-# =========================
 def create_tables_if_not_exist() -> None:
     with app.app_context():
         db.create_all()
@@ -125,9 +111,7 @@ def create_tables_if_not_exist() -> None:
 
 create_tables_if_not_exist()
 
-# =========================
-# Manejo básico de errores
-# =========================
+
 @app.errorhandler(404)
 def not_found(e):
     return jsonify({"error": "Not Found", "msg": "Recurso no encontrado"}), 404
