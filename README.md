@@ -138,7 +138,15 @@ Este proyecto es de uso libre para fines educativos y de aprendizaje. Se proporc
 
 👨‍💻 Autor
 
-Desarrollado por Brayan Franco 
+Desarrollado por Brayan Franco
+
+
+
+Configuración de postman 
+
+https://drive.google.com/file/d/1KImT4W8lLjblNk-9cxVERBGl-zJrR2\_0/view?usp=sharing
+
+
 
 
 
