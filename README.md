@@ -144,8 +144,7 @@ Desarrollado por Brayan Franco
 
 Configuración de postman 
 
-https://drive.google.com/file/d/1KImT4W8lLjblNk-9cxVERBGl-zJrR2\_0/view?usp=sharing
-
+https://drive.google.com/file/d/1KImT4W8lLjblNk-9cxVERBGl-zJrR2_0/view?usp=sharing
 
 
 
